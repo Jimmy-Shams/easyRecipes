@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8cd3c63727.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/cart.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/popup.css" />
+    <link rel="stylesheet" href="./css/testimonial.css" />
+    <link rel="stylesheet" href="./css/backendadd.css" />
+
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./js/cart.js"></script>
+  </head>
+  <body>
+    <a class="popup_cart" href="cart.html">
+      <div class="ribbon">
+        <div class="ribbon-content">View Basket<br />& Checkout</div>
+        <div class="ribbon-content ribbon-basket"><i class="basket">5</i></div>
+      </div>
+    </a>
+    <!-------------------- popup chat----------------->
+    <section class="section">
+      <button class="chat-btn">
+        <i class="material-icons"> comment </i>
+      </button>
+
+      <div class="chat-popup">
+        <div class="badge">1</div>
+        <div class="chat-area">
+          <div class="income-msg">
+            <img src="images/person.jpg" class="avatar" alt="" />
+            <span class="msg"> Hi, How can I help you?</span>
+          </div>
+        </div>
+
+        <div class="input-area">
+          <input type="text" placeholder="message" />
+          <button id="emoji-btn">&#127773;</button>
+          <button class="submit"><i class="material-icons"> send</i></button>
+        </div>
+      </div>
+    </section>
+    <!------------------ navbar ------------------->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top box-shadow">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active mx-2">
+            <a class="nav-link" href="./">
+              <h4 class="text-danger fw-bolder">EasyRecipes</h4>
+            </a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-danger" href="#">About Us</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a
+              class="nav-link text-danger login_register_invoker"
+              href="./login.html"
+              >login/signup</a
+            >
+          </li>
+        </ul>
+        <div class="search-container">
+          <input
+            type="text"
+            name="search"
+            placeholder="Search your Favourite item..."
+            class="search-input text-danger"
+          />
+          <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+        </div>
+
+        <div class="user_picture">
+          <a href="./userpage.html"><img src="./images/bg2.jpg" alt="" /></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="bg__gradient"></div>
+    <div class="container">
+      <section id="cart">
+        <article class="product">
+          <header>
+            <a class="remove">
+              <img
+                src="http://www.astudio.si/preview/blockedwp/wp-content/uploads/2012/08/1.jpg"
+                alt=""
+              />
+              <h3>Remove product</h3>
+            </a>
+          </header>
+          <div class="content">
+            <h1>Lorem ipsum</h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta,
+            numquam quis perspiciatis ea ad omnis provident laborum dolore in
+            atque.
+          </div>
+          <footer class="content">
+            <span class="qt-minus">-</span>
+            <span class="qt">2</span>
+            <span class="qt-plus">+</span>
+            <h2 class="full-price">29.98tk</h2>
+            <h2 class="price">14.99tk</h2>
+          </footer>
+        </article>
+        <article class="product">
+          <header>
+            <a class="remove">
+              <img
+                src="http://www.astudio.si/preview/blockedwp/wp-content/uploads/2012/08/3.jpg"
+                alt=""
+              />
+              <h3>Remove product</h3>
+            </a>
+          </header>
+          <div class="content">
+            <h1>Lorem ipsum dolor</h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta,
+            numquam quis perspiciatis ea ad omnis provident laborum dolore in
+            atque.
+          </div>
+          <footer class="content">
+            <span class="qt-minus">-</span>
+            <span class="qt">1</span>
+            <span class="qt-plus">+</span>
+            <h2 class="full-price">79.99tk</h2>
+            <h2 class="price">79.99tk</h2>
+          </footer>
+        </article>
+        <article class="product">
+          <header>
+            <a class="remove">
+              <img
+                src="http://www.astudio.si/preview/blockedwp/wp-content/uploads/2012/08/5.jpg"
+                alt=""
+              />
+              <h3>Remove product</h3>
+            </a>
+          </header>
+          <div class="content">
+            <h1>Lorem ipsum dolor ipsdu</h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta,
+            numquam quis perspiciatis ea ad omnis provident laborum dolore in
+            atque.
+          </div>
+          <footer class="content">
+            <span class="qt-minus">-</span>
+            <span class="qt">3</span>
+            <span class="qt-plus">+</span>
+            <h2 class="full-price">53.99tk</h2>
+            <h2 class="price">17.99tk</h2>
+          </footer>
+        </article>
+      </section>
+    </div>
+    <footer id="site-footer">
+      <div class="container clearfix">
+        <div class="left">
+          <h2 class="subtotal fw-bolder">Subtotal: <span>163.96</span>tk</h2>
+          <h3 class="tax fw-bolder">Taxes (5%): <span>8.2</span>tk</h3>
+          <h3 class="shipping fw-bolder">Shipping: <span>5.00</span>tk</h3>
+        </div>
+        <div class="right">
+          <h1 class="total fw-bolder">Total: <span>177.16</span>tk</h1>
+          <a class="btn fw-bolder">Checkout</a>
+        </div>
+      </div>
+    </footer>
+    <!--------------------- testimonial -------------------------->
+
+    <section id="testim" class="testim">
+      <div class="wrap">
+        <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+        <span id="left-arrow" class="arrow left fa fa-chevron-left"></span>
+        <ul id="testim-dots" class="dots">
+          <li class="dot active"></li>
+
+          <li class="dot"></li>
+
+          <li class="dot"></li>
+
+          <li class="dot"></li>
+
+          <li class="dot"></li>
+        </ul>
+        <div id="testim-content" class="cont">
+          <div class="active">
+            <div class="img"><img src="" alt="" /></div>
+            <h2>Lorem P. Ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+          </div>
+
+          <div>
+            <div class="img"><img src="" alt="" /></div>
+            <h2>Mr. Lorem Ipsum</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+          </div>
+
+          <div>
+            <div class="img"><img src="" title="img" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/loginverification.js"></script>
+  </body>
+</html>

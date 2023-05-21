@@ -1,0 +1,17 @@
+{
+  "watch": [
+    "package.json",
+    "nodemon.json",
+    ".eslintrc.json",
+    ".babelrc",
+    ".prettierrc",
+    "controllers/",
+    "routes/",
+    "app.js",
+    "server.js",
+    "models/",
+    "view/"
+  ],
+  "verbose": true,
+  "ignore": ["*.test.js", "*.spec.js"]
+}

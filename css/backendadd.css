@@ -1,0 +1,23 @@
+.peer_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+tag {
+  background-color: rgba(136, 136, 131, 0.24);
+  border-radius: 30px;
+  padding: 2px 4px;
+  font-size: 13px;
+  margin: 2px;
+}
+
+tag:hover {
+  cursor: pointer;
+  background-color: bisque;
+}

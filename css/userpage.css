@@ -1,0 +1,31 @@
+.userinfo_cont {
+  background-color: rgb(200, 219, 219);
+  border-radius: 40px;
+  width: max-content;
+  padding: 10px;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px auto;
+}
+
+.userinfo {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  max-width: 300px;
+  overflow: auto;
+}
+
+.userinfo:hover {
+  cursor: pointer;
+  background-color: rgba(129, 133, 137, 0.526);
+}
+
+.logout {
+  margin: 0 auto;
+  padding: 4px;
+  border: none;
+}

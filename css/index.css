@@ -1,0 +1,365 @@
+:root {
+  --bg-color: rgb(221, 201, 52);
+  --typewriterSpeed: 3s;
+  --typewriterCharacters: 8;
+  --default_font_size: clamp(15px, 3vw + 15px, 17px);
+  --typewriter_animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+  --typewriter_before: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+  /* --background_color: black; */
+}
+
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  margin: 0;
+  background: url("../images/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+* {
+  transition: 0.5s;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: initial;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+button,
+input[type="button"] {
+  padding: 10px 20px;
+  border: none;
+  background: var(--bg-color);
+  max-height: 95px;
+  box-sizing: border-box;
+}
+
+input {
+  padding: 5px;
+  border: 1px solid rgba(160, 157, 157, 0.432);
+}
+
+button,
+input,
+.main_container,
+.inner_query_container,
+.inner_query_container--register,
+.ui-datepicker-trigger,
+.ui-datepicker-year,
+.ui-icon,
+input[type="button"] {
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+button,
+input[type="button"],
+.header_animated_text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: #ebc854;
+}
+
+button:hover,
+input[type="button"]:hover,
+a:hover,
+.header_animated_text :hover,
+input:hover {
+  cursor: pointer;
+  background-color: rgba(198, 225, 78, 0.56);
+  color: white;
+}
+
+input:hover {
+  cursor: text;
+}
+
+.main_container {
+  margin: clamp(2%, 5%, 10%) auto;
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 600px;
+  min-width: 260px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background-color: rgba(227, 156, 24, 0.375);
+  /* border: 0.5px solid rgb(14, 13, 13); */
+}
+
+.header_animated_text {
+  min-height: 200px;
+  max-width: 500px;
+  min-width: 260px;
+  flex-direction: column;
+  background: var(--bg-color);
+}
+
+h1 {
+  font-size: 19px;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  width: max-content;
+  z-index: 0;
+  /* background-color: var(--background_color); */
+}
+
+.head_cont {
+  position: relative;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.before,
+.after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.before {
+  background: var(--bg-color);
+  animation: var(--typewriter_before);
+  width: 100%;
+  z-index: 1;
+}
+
+.after {
+  width: 0.125em;
+  height: 50%;
+  margin: auto 0;
+  background: black;
+  animation: var(--typewriter_animation);
+  z-index: 1;
+}
+
+.subtitle {
+  color: hsl(0 0% 0% / 0.7);
+  font-size: var(--default_font_size);
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+.info_box {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: max-content;
+  text-align: center;
+  z-index: 100;
+  font-weight: 300;
+  opacity: 0;
+}
+
+@keyframes typewriter {
+  to {
+    left: 99%;
+  }
+}
+
+@keyframes back {
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user_query_container {
+  min-width: 260px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c9da3981;
+  padding: 5px;
+}
+
+.outer_query_container {
+  display: flex;
+  overflow: hidden;
+  max-width: 100%;
+  min-width: 260px;
+}
+
+.inner_query_container,
+.inner_query_container--register {
+  padding: 10px;
+  margin: 10px 0px;
+  min-width: 480px;
+  overflow: auto;
+  background-color: rgba(184, 182, 180, 0.24);
+  max-height: 170px;
+}
+
+.inner_query_container--register {
+  transform: translateX(200px);
+}
+
+.query_box {
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.ui-icon {
+  color: white;
+  padding: 1px 5px;
+  margin: 10px 10px;
+}
+
+.ui-icon:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+.ui-datepicker-next {
+  margin-left: 140px;
+}
+
+.ui-datepicker {
+  width: 17em;
+  padding: 0.2em 0.2em 0;
+  display: none;
+  color: white;
+  background: #0c0c0c;
+}
+
+.ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center;
+  color: #ffffff;
+  background: #050505;
+}
+
+.ui-datepicker table {
+  width: 100%;
+  font-size: 0.7em;
+  border-collapse: collapse;
+  font-family: verdana;
+  margin: 0 0 0.4em;
+  color: #000000;
+  background: #ffffff;
+}
+
+.ui-datepicker td {
+  border: 0;
+  padding: 1px;
+}
+
+.ui-state-default {
+  border-radius: 5px;
+}
+
+.ui-datepicker td span,
+.ui-datepicker td a {
+  display: block;
+  padding: 0.8em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ui-datepicker-year {
+  font-family: "Ubuntu", sans-serif;
+  margin-left: 5px;
+}
+
+.ui-datepicker-trigger {
+  position: absolute;
+  right: 20px;
+  width: 23px;
+  aspect-ratio: 1/1;
+}
+
+.ui-datepicker-trigger:hover {
+  cursor: pointer;
+  background-color: #706e6e3f;
+}
+
+.btn_img,
+.btn_img_register {
+  width: 0px;
+  transform: translateX(20px);
+  aspect-ratio: 1/1;
+  margin-left: 5px;
+  z-index: 1;
+}
+
+.btn_img_register {
+  transform: translateX(-20px);
+}
+
+.inner_query_container::-webkit-scrollbar,
+.inner_query_container--register::-webkit-scrollbar {
+  width: 5px;
+}
+
+.inner_query_container::-webkit-scrollbar-track,
+.inner_query_container--register::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+
+.inner_query_container::-webkit-scrollbar-thumb,
+.inner_query_container--register::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border: 1px solid rgba(233, 238, 236, 0.849);
+}
+
+@media screen and (max-width: 534px) {
+  .query_box {
+    flex-direction: column;
+  }
+  .query_box > * {
+    margin: 3px 0;
+  }
+  .inner_query_container,
+  .inner_query_container--register {
+    height: 100%;
+    min-width: 100%;
+    overflow-y: scroll;
+    padding: 0;
+  }
+
+  .outer_query_container {
+    display: flex;
+  }
+  .ui-datepicker-trigger {
+    top: 205px;
+    right: 40px;
+  }
+}

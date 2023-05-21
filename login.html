@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8cd3c63727.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/variables.js"></script>
+    <script defer src="./js/fetchfunctions.js"></script>
+    <script defer src="./js/logincode.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/jqueryui/jquery-ui.js"></script>
+    <script
+      defer
+      src="./js/common_value_extraction_and_validation_code.js"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top box-shadow">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active mx-2">
+            <a class="nav-link" href="./">
+              <h4 class="text-danger fw-bolder">EasyRecipes</h4>
+            </a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-danger" href="#">About Us</a>
+          </li>
+        </ul>
+        <div class="search-container">
+          <input
+            type="text"
+            name="search"
+            placeholder="Search your Favourite item..."
+            class="search-input text-danger"
+          />
+          <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main_container">
+      <section class="header_animated_text">
+        <div class="head_cont">
+          <div class="before"></div>
+          <h1 class="header">Welcome!</h1>
+          <div class="after"></div>
+        </div>
+        <p class="subtitle">login ></p>
+      </section>
+
+      <section class="user_query_container">
+        <div class="outer_query_container">
+          <div class="inner_query_container">
+            <div class="input_identifier query_box">
+              <label for="username">Username :</label>
+              <input
+                type="text"
+                name="userName"
+                id="identifier"
+                class="input"
+                title="username"
+              />
+            </div>
+
+            <div class="input_password query_box">
+              <label for="password">Password :</label>
+              <input
+                type="password"
+                name="userPass"
+                id="password"
+                class="input"
+                title="password"
+              />
+            </div>
+
+            <div class="navigation query_box">
+              <button type="button" class="login">Login</button>
+              <button type="button" class="register">
+                Register
+                <img class="btn_img" src="./images/rightarrow.svg" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="inner_query_container--register">
+            <div class="input_identifier query_box">
+              <label for="userName">Username :</label>
+              <input
+                type="text"
+                name="userName"
+                id="register_identifier"
+                class="input"
+                title="username"
+              />
+            </div>
+
+            <div class="input_identifier query_box">
+              <label for="userEmail">Email :</label>
+              <input
+                type="email"
+                name="userEmail"
+                id="email"
+                class="input"
+                title="email"
+              />
+            </div>
+
+            <div class="input_identifier query_box">
+              <label for="userAddress">Address :</label>
+              <input
+                type="text"
+                name="userAddress"
+                id="adress"
+                class="input"
+                title="adress"
+              />
+            </div>
+
+            <div class="input_identifier query_box">
+              <label for="username">Real name :</label>
+              <input
+                type="text"
+                name="userRealName"
+                id="register_identifier"
+                class="input"
+                title="username"
+              />
+            </div>
+
+            <div class="input_mobile_no query_box">
+              <label for="mobile_no">Mobile no :</label>
+              <input
+                type="text"
+                name="userMobileNo"
+                id="mobile_no"
+                class="input"
+                title="mobile_no"
+              />
+            </div>
+
+            <div class="input_select_birthdate query_box">
+              <label for="birthdate">Birth-date : </label>
+              <input
+                type="date"
+                name="userBirthdate"
+                id="select_birthdate"
+                class="input"
+                title="birthdate"
+              />
+            </div>
+
+            <div class="input_select_birthdate query_box">
+              <label for="userGender">Gender :</label>
+              <input
+                type="text"
+                name="userGender"
+                id="userGender"
+                class="input"
+                title="userGender"
+              />
+            </div>
+
+            <div class="input_select_birthdate query_box">
+              <label for="userCreditInfo">Credit-info :</label>
+              <input
+                type="text"
+                name="userCreditInfo"
+                id="userCreditInfo"
+                class="input"
+                title="userCreditInfo"
+              />
+            </div>
+
+            <div class="input_select_birthdate query_box">
+              <label for="userProfilePic">Image link for profile :</label>
+              <input
+                type="text"
+                name="userProfilePic"
+                id="userProfilePic"
+                class="input"
+                title="userProfilePic"
+              />
+            </div>
+
+            <div class="input_password query_box">
+              <label for="password">Password :</label>
+              <input
+                type="password"
+                name="userPass"
+                id="register_password"
+                class="input"
+                title="password"
+              />
+            </div>
+
+            <div class="input_password query_box">
+              <label for="reenter_password">Re-enter password :</label>
+              <input
+                type="password"
+                name="reenter_password"
+                id="reenter_password"
+                class="input"
+                title="password"
+              />
+            </div>
+
+            <div class="navigation_register query_box">
+              <button type="button" class="register_login">
+                <img
+                  class="btn_img_register"
+                  src="./images/arrow-left.svg"
+                  alt=""
+                />
+                Login
+              </button>
+              <button type="button" class="register_register">Register</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="forgot_password">
+          Forgot password ? <a href="/">Click here</a>
+        </div>
+      </section>
+    </main>
+
+    <section class="info_box"><p>please login to continue.</p></section>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+.user_interaction {
+  display: flex;
+  flex-direction: column;
+}
+
+.add_testimonial {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 7px 0px;
+  gap: 10px;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 2px;
+}
+
+.like-message {
+  margin: 0;
+}
+
+.like:hover {
+  cursor: pointer;
+  background-color: rgba(97, 97, 97, 0.199);
+  border-radius: 40px;
+}
+
+i {
+  margin-bottom: 15px;
+}

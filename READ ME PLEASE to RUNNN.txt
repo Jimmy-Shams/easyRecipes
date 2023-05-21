@@ -1,0 +1,13 @@
+Open the project file in any code  editor. Make sure you have Node.js installed.
+
+navigate to the 'easyrecipes-backend' file by writingg 'cd ./easyrecipes-backend' in the terminal.
+
+write 'npm i' in the terminal.
+
+then 'npm run nm' .
+
+then navigate to the base folder and open index.html in any browser.
+
+npm packages used and technologies used express,nodemon,html,css,js.
+
+Database used MongoDB.
